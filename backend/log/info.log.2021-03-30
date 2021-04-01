@@ -1,0 +1,377 @@
+2021-03-30 09:01:48.559|INFO|testing_log|id=111
+2021-03-30 09:01:48.559|ERROR|testing_log_error|id=111
+2021-03-30 09:04:51.063|ERROR|get_auth_url|ex=what?
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/views.py", line 16, in get_auth_url
+    raise Exception('what?')
+Exception: what?
+2021-03-30 09:15:19.408|ERROR|get_auth_url_exception
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/views.py", line 16, in get_auth_url
+    return Response({'url': get_authorize_url(request)})
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 10, in wrapper
+    return view_fn(client, *args, **kwargs)
+TypeError: get_authorize_url() takes 1 positional argument but 2 were given
+2021-03-30 09:31:55.078|INFO|exchange_token|auth_code=4f69254159d5508ee106e537ed36dae2ba328d2b,token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Il9SQzZ4d09NdmJ0dDZhald1WmU2R2xncy1qM3dtNXJpQXlDVW9SYXNhLUkifQ.eyJzdWIiOiJ4NWRhMmNjN2MtOGQ2ZS0xZWFmLTI3NzItZjg4MTY0ZWEyOThkIiwianRpIjoiMm5mRHNwWU85S2Jtak9XbzZ3RmR4bjI1MXpiTW9PRVN6OU1RZTJIMSIsInNjb3BlIjpbInVpbmZpbiIsIm5hbWUiLCJzZXgiLCJyYWNlIiwibmF0aW9uYWxpdHkiLCJkb2IiLCJlbWFpbCIsIm1vYmlsZW5vIiwicmVnYWRkIiwiaG91c2luZ3R5cGUiLCJoZGJ0eXBlIiwibWFyaXRhbCIsImVkdWxldmVsIiwib3duZXJwcml2YXRlIiwiY3BmY29udHJpYnV0aW9ucyIsImNwZmJhbGFuY2VzIiwiYmlydGhjb3VudHJ5IiwicmVzaWRlbnRpYWxzdGF0dXMiLCJhbGlhc25hbWUiLCJtYXJyaWVkbmFtZSIsInBhc3N0eXBlIiwiZW1wbG95bWVudHNlY3RvciIsIm5vYWhpc3RvcnkiXSwidG9rZW5OYW1lIjoiYWNjZXNzX3Rva2VuIiwidG9rZW5fdHlwZSI6IkJlYXJlciIsImdyYW50X3R5cGUiOiJhdXRob3JpemF0aW9uX2NvZGUiLCJleHBpcmVzX2luIjoxODAwLCJhdWQiOiJTVEcyLU1ZSU5GTy1TRUxGLVRFU1QiLCJyZWFsbSI6Im15aW5mby1jb20iLCJpc3MiOiJodHRwczovL3Rlc3QuYXBpLm15aW5mby5nb3Yuc2cvc2VydmljZWF1dGgvbXlpbmZvLWNvbSIsImlhdCI6MTYxNzA5NjcxNCwibmJmIjoxNjE3MDk2NzE0LCJleHAiOjE2MTcwOTg1MTR9.rGd5yhTTryiZ3Ere1OdoywXZupgJe8fa5QjJgSXpBJvgy_VrltSDzlH34lPjG1gPk7rcxwlEF5V1ktg141vS4HVKjbhMeu3cteG0sRe9PI0tMragRENAMgQIb9avgMhTlerBoUjyqjDJLxE4BOyBYGPCjK57FnNHN9agg87H34gIgbSPvazXeqktGOVNlE_54S-E5CYlIkxc6tgc7SsAGRAfkkEueBdjLDw2PXt2bnPOPSXMHqTk9S_fbO6EFBJtGRqu9sAEc4bvG2Ovc0mOPNcbh1lfVohxwX5Kq7dI4KUekYYe-AtXXtlOs8bbNsQB2t8N6pL6_8JCuw0AQcBx6A
+2021-03-30 09:32:30.005|ERROR|get_user_info_exception
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/views.py", line 45, in get_user_info
+    user_info = get_user_info(token)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/rest_framework/views.py", line 492, in dispatch
+    request = self.initialize_request(request, *args, **kwargs)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/rest_framework/views.py", line 391, in initialize_request
+    return Request(
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/rest_framework/request.py", line 154, in __init__
+    assert isinstance(request, HttpRequest), (
+AssertionError: The `request` argument must be an instance of `django.http.HttpRequest`, not `builtins.str`.
+2021-03-30 09:33:57.259|INFO|exchange_token|token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Il9SQzZ4d09NdmJ0dDZhald1WmU2R2xncy1qM3dtNXJpQXlDVW9SYXNhLUkifQ.eyJzdWIiOiJ4NWRhMmNjN2MtOGQ2ZS0xZWFmLTI3NzItZjg4MTY0ZWEyOThkIiwianRpIjoiMm5mRHNwWU85S2Jtak9XbzZ3RmR4bjI1MXpiTW9PRVN6OU1RZTJIMSIsInNjb3BlIjpbInVpbmZpbiIsIm5hbWUiLCJzZXgiLCJyYWNlIiwibmF0aW9uYWxpdHkiLCJkb2IiLCJlbWFpbCIsIm1vYmlsZW5vIiwicmVnYWRkIiwiaG91c2luZ3R5cGUiLCJoZGJ0eXBlIiwibWFyaXRhbCIsImVkdWxldmVsIiwib3duZXJwcml2YXRlIiwiY3BmY29udHJpYnV0aW9ucyIsImNwZmJhbGFuY2VzIiwiYmlydGhjb3VudHJ5IiwicmVzaWRlbnRpYWxzdGF0dXMiLCJhbGlhc25hbWUiLCJtYXJyaWVkbmFtZSIsInBhc3N0eXBlIiwiZW1wbG95bWVudHNlY3RvciIsIm5vYWhpc3RvcnkiXSwidG9rZW5OYW1lIjoiYWNjZXNzX3Rva2VuIiwidG9rZW5fdHlwZSI6IkJlYXJlciIsImdyYW50X3R5cGUiOiJhdXRob3JpemF0aW9uX2NvZGUiLCJleHBpcmVzX2luIjoxODAwLCJhdWQiOiJTVEcyLU1ZSU5GTy1TRUxGLVRFU1QiLCJyZWFsbSI6Im15aW5mby1jb20iLCJpc3MiOiJodHRwczovL3Rlc3QuYXBpLm15aW5mby5nb3Yuc2cvc2VydmljZWF1dGgvbXlpbmZvLWNvbSIsImlhdCI6MTYxNzA5NjcxNCwibmJmIjoxNjE3MDk2NzE0LCJleHAiOjE2MTcwOTg1MTR9.rGd5yhTTryiZ3Ere1OdoywXZupgJe8fa5QjJgSXpBJvgy_VrltSDzlH34lPjG1gPk7rcxwlEF5V1ktg141vS4HVKjbhMeu3cteG0sRe9PI0tMragRENAMgQIb9avgMhTlerBoUjyqjDJLxE4BOyBYGPCjK57FnNHN9agg87H34gIgbSPvazXeqktGOVNlE_54S-E5CYlIkxc6tgc7SsAGRAfkkEueBdjLDw2PXt2bnPOPSXMHqTk9S_fbO6EFBJtGRqu9sAEc4bvG2Ovc0mOPNcbh1lfVohxwX5Kq7dI4KUekYYe-AtXXtlOs8bbNsQB2t8N6pL6_8JCuw0AQcBx6A,user_info={'uinfin': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': 'S3100052A'}, 'name': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': 'TAN HENG HUAT'}, 'sex': {'lastupdated': '2021-03-30', 'code': 'F', 'source': '1', 'classification': 'C', 'desc': 'FEMALE'}, 'race': {'lastupdated': '2021-03-30', 'code': 'CN', 'source': '1', 'classification': 'C', 'desc': 'CHINESE'}, 'nationality': {'lastupdated': '2021-03-30', 'code': 'SG', 'source': '1', 'classification': 'C', 'desc': 'SINGAPORE CITIZEN'}, 'dob': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': '1998-06-06'}, 'email': {'lastupdated': '2021-03-30', 'source': '4', 'classification': 'C', 'value': 'myinfotesting@gmail.com'}, 'mobileno': {'lastupdated': '2021-03-30', 'source': '4', 'classification': 'C', 'areacode': {'value': '65'}, 'prefix': {'value': '+'}, 'nbr': {'value': '97399245'}}, 'regadd': {'country': {'code': 'SG', 'desc': 'SINGAPORE'}, 'unit': {'value': '128'}, 'street': {'value': 'BEDOK NORTH AVENUE 4'}, 'lastupdated': '2021-03-30', 'block': {'value': '102'}, 'source': '1', 'postal': {'value': '460102'}, 'classification': 'C', 'floor': {'value': '09'}, 'type': 'SG', 'building': {'value': 'PEARL GARDEN'}}, 'housingtype': {'lastupdated': '2021-03-30', 'code': '', 'source': '1', 'classification': 'C', 'desc': ''}, 'hdbtype': {'lastupdated': '2021-03-30', 'code': '113', 'source': '1', 'classification': 'C', 'desc': '3-ROOM FLAT (HDB)'}, 'marital': {'lastupdated': '2021-03-30', 'code': '', 'source': '1', 'classification': 'C', 'desc': ''}, 'edulevel': {'lastupdated': '2021-03-30', 'code': '', 'source': '2', 'classification': 'C', 'desc': ''}, 'ownerprivate': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': 'false'}, 'cpfcontributions': {'lastupdated': '2021-03-30', 'source': '1', 'history': [{'date': {'value': '2020-01-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-01'}}, {'date': {'value': '2020-02-29'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-02'}}, {'date': {'value': '2020-03-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 2850}, 'month': {'value': '2020-03'}}, {'date': {'value': '2020-04-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-04'}}, {'date': {'value': '2020-05-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-05'}}, {'date': {'value': '2020-06-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-06'}}, {'date': {'value': '2020-07-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 5700}, 'month': {'value': '2020-07'}}, {'date': {'value': '2020-08-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-08'}}, {'date': {'value': '2020-09-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-09'}}, {'date': {'value': '2020-10-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-10'}}, {'date': {'value': '2020-11-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-11'}}, {'date': {'value': '2020-12-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-12'}}, {'date': {'value': '2021-01-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2021-01'}}, {'date': {'value': '2021-02-28'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2021-02'}}, {'date': {'value': '2021-03-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 3150}, 'month': {'value': '2021-03'}}], 'classification': 'C'}, 'cpfbalances': {'lastupdated': '2021-03-30', 'oa': {'value': 58839.75}, 'source': '1', 'classification': 'C', 'ma': {'value': 20466}, 'sa': {'value': 15349.5}}, 'birthcountry': {'lastupdated': '2021-03-30', 'code': 'SG', 'source': '1', 'classification': 'C', 'desc': 'SINGAPORE'}, 'residentialstatus': {'lastupdated': '2021-03-30', 'code': 'C', 'source': '1', 'classification': 'C', 'desc': 'CITIZEN'}, 'aliasname': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': 'TRICIA TAN XIAO HUI'}, 'marriedname': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': ''}, 'passtype': {'lastupdated': '2021-03-30', 'code': '', 'source': '3', 'classification': 'C', 'desc': ''}, 'employmentsector': {'lastupdated': '2021-03-30', 'source': '3', 'classification': 'C', 'value': ''}, 'noahistory': {'noas': [{'amount': {'value': 64400}, 'trade': {'value': 0}, 'interest': {'value': 0}, 'yearofassessment': {'value': '2020'}, 'taxclearance': {'value': 'N'}, 'employment': {'value': 64400}, 'rent': {'value': 0}, 'category': {'value': 'ORIGINAL'}}, {'amount': {'value': 53700}, 'trade': {'value': 0}, 'interest': {'value': 0}, 'yearofassessment': {'value': '2019'}, 'taxclearance': {'value': 'N'}, 'employment': {'value': 36112.8}, 'rent': {'value': 0}, 'category': {'value': 'ORIGINAL'}}], 'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C'}}
+2021-03-30 09:42:07.152|ERROR|get_user_info_exception
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/jwt/api_jws.py", line 180, in _load
+    signing_input, crypto_segment = jwt.rsplit(b'.', 1)
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/views.py", line 45, in get_user_info
+    user_info = client_get_user_info(token)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 11, in wrapper
+    return view_fn(client, *args, **kwargs)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 29, in get_user_info
+    decoded_access_token = get_decoded_access_token(token)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/security.py", line 73, in get_decoded_access_token
+    return jwt.decode(
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/jwt/api_jwt.py", line 84, in decode
+    payload, _, _, _ = self._load(jwt)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/jwt/api_jws.py", line 183, in _load
+    raise DecodeError('Not enough segments')
+jwt.exceptions.DecodeError: Not enough segments
+2021-03-30 09:43:15.081|INFO|exchange_token|token=aksdfsdf
+2021-03-30 09:43:15.081|ERROR|get_user_info_exception
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/jwt/api_jws.py", line 180, in _load
+    signing_input, crypto_segment = jwt.rsplit(b'.', 1)
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/views.py", line 47, in get_user_info
+    user_info = client_get_user_info(token)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 11, in wrapper
+    return view_fn(client, *args, **kwargs)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 29, in get_user_info
+    decoded_access_token = get_decoded_access_token(token)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/security.py", line 73, in get_decoded_access_token
+    return jwt.decode(
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/jwt/api_jwt.py", line 84, in decode
+    payload, _, _, _ = self._load(jwt)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/jwt/api_jws.py", line 183, in _load
+    raise DecodeError('Not enough segments')
+jwt.exceptions.DecodeError: Not enough segments
+2021-03-30 10:26:36.697|ERROR|exchange_token|error_no_code_found
+2021-03-30 10:27:33.241|ERROR|exchange_token|error_no_code_found
+2021-03-30 10:27:33.243|INFO|exchange_token|auth_code=abcdef
+2021-03-30 10:27:34.663|ERROR|exchange_token_exception
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/views.py", line 30, in exchange_token
+    token = get_access_token(auth_code)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 11, in wrapper
+    return view_fn(client, *args, **kwargs)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 22, in get_access_token
+    resp = client.get_access_token(auth_code)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/client.py", line 82, in get_access_token
+    resp = self.request(api_url, method="POST", auth_header=auth_header, data=params)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/client.py", line 49, in request
+    response.raise_for_status()
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://test.api.myinfo.gov.sg/com/v3/token
+2021-03-30 10:27:49.791|ERROR|exchange_token|error_no_code_found
+2021-03-30 10:27:49.794|INFO|exchange_token|auth_code=abcdef
+2021-03-30 10:27:51.284|ERROR|exchange_token_exception
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/views.py", line 30, in exchange_token
+    token = get_access_token(auth_code)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 11, in wrapper
+    return view_fn(client, *args, **kwargs)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 22, in get_access_token
+    resp = client.get_access_token(auth_code)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/client.py", line 82, in get_access_token
+    resp = self.request(api_url, method="POST", auth_header=auth_header, data=params)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/client.py", line 49, in request
+    response.raise_for_status()
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://test.api.myinfo.gov.sg/com/v3/token
+2021-03-30 10:28:21.306|ERROR|exchange_token|error_no_code_found
+2021-03-30 10:28:21.307|INFO|exchange_token|auth_code=abcdef
+2021-03-30 10:28:22.891|ERROR|exchange_token_exception
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/views.py", line 30, in exchange_token
+    token = get_access_token(auth_code)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 11, in wrapper
+    return view_fn(client, *args, **kwargs)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 22, in get_access_token
+    resp = client.get_access_token(auth_code)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/client.py", line 82, in get_access_token
+    resp = self.request(api_url, method="POST", auth_header=auth_header, data=params)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/client.py", line 49, in request
+    response.raise_for_status()
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://test.api.myinfo.gov.sg/com/v3/token
+2021-03-30 10:30:05.424|ERROR|exchange_token|error_no_code_found
+2021-03-30 10:30:05.426|INFO|exchange_token|auth_code=abcdef
+2021-03-30 10:30:07.036|ERROR|exchange_token_exception
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/views.py", line 30, in exchange_token
+    token = get_access_token(auth_code)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 11, in wrapper
+    return view_fn(client, *args, **kwargs)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 22, in get_access_token
+    resp = client.get_access_token(auth_code)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/client.py", line 82, in get_access_token
+    resp = self.request(api_url, method="POST", auth_header=auth_header, data=params)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/client.py", line 49, in request
+    response.raise_for_status()
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://test.api.myinfo.gov.sg/com/v3/token
+2021-03-30 10:30:07.044|ERROR|get_user_info|error_no_token_found
+2021-03-30 10:30:07.046|INFO|exchange_token|token=abcdef
+2021-03-30 10:30:07.047|ERROR|get_user_info_exception
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/jwt/api_jws.py", line 180, in _load
+    signing_input, crypto_segment = jwt.rsplit(b'.', 1)
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/views.py", line 47, in get_user_info
+    user_info = client_get_user_info(token)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 11, in wrapper
+    return view_fn(client, *args, **kwargs)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 29, in get_user_info
+    decoded_access_token = get_decoded_access_token(token)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/security.py", line 73, in get_decoded_access_token
+    return jwt.decode(
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/jwt/api_jwt.py", line 84, in decode
+    payload, _, _, _ = self._load(jwt)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/jwt/api_jws.py", line 183, in _load
+    raise DecodeError('Not enough segments')
+jwt.exceptions.DecodeError: Not enough segments
+2021-03-30 10:32:57.064|INFO|exchange_token|auth_code=0c3f67ec7b4b60ab84940c35760b099d5bafe7fb
+2021-03-30 10:32:58.508|INFO|exchange_token|auth_code=0c3f67ec7b4b60ab84940c35760b099d5bafe7fb,token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Il9SQzZ4d09NdmJ0dDZhald1WmU2R2xncy1qM3dtNXJpQXlDVW9SYXNhLUkifQ.eyJzdWIiOiJ4NWRhMmNjN2MtOGQ2ZS0xZWFmLTI3NzItZjg4MTY0ZWEyOThkIiwianRpIjoiRy1DNjYzS1JYRTg2RkRtWGNrdTdqYW0xNG9aY205bnJsOFg0NGNlOCIsInNjb3BlIjpbInVpbmZpbiIsIm5hbWUiLCJzZXgiLCJyYWNlIiwibmF0aW9uYWxpdHkiLCJkb2IiLCJlbWFpbCIsIm1vYmlsZW5vIiwicmVnYWRkIiwiaG91c2luZ3R5cGUiLCJoZGJ0eXBlIiwibWFyaXRhbCIsImVkdWxldmVsIiwib3duZXJwcml2YXRlIiwiY3BmY29udHJpYnV0aW9ucyIsImNwZmJhbGFuY2VzIiwiYmlydGhjb3VudHJ5IiwicmVzaWRlbnRpYWxzdGF0dXMiLCJhbGlhc25hbWUiLCJtYXJyaWVkbmFtZSIsInBhc3N0eXBlIiwiZW1wbG95bWVudHNlY3RvciIsIm5vYWhpc3RvcnkiXSwidG9rZW5OYW1lIjoiYWNjZXNzX3Rva2VuIiwidG9rZW5fdHlwZSI6IkJlYXJlciIsImdyYW50X3R5cGUiOiJhdXRob3JpemF0aW9uX2NvZGUiLCJleHBpcmVzX2luIjoxODAwLCJhdWQiOiJTVEcyLU1ZSU5GTy1TRUxGLVRFU1QiLCJyZWFsbSI6Im15aW5mby1jb20iLCJpc3MiOiJodHRwczovL3Rlc3QuYXBpLm15aW5mby5nb3Yuc2cvc2VydmljZWF1dGgvbXlpbmZvLWNvbSIsImlhdCI6MTYxNzEwMDM3OCwibmJmIjoxNjE3MTAwMzc4LCJleHAiOjE2MTcxMDIxNzh9.cH5GtnCOH5cee6-gJO_zmDf5pgfJoMezHyKrS41ZXTQ0EMWvVZTZaL7qbIbHKcN0sdc-FsEBT5iXZseYvBI-jvamGOLfZgYDNRo9FxC_j6PoPGmL8roT1Dgh4zRqo_Od0rCiNJFOnMZS7Wm5pZTA4SgiaGiaU-B-RzW74qbtHzRqM46lKTEiXwpp7gzX6dFD1QYYOdbrFWceS2hMQHK9A2yMG3iJv-zNgy7gR5GFqY67V6kiOu2nRgon8zNsYcufV6K5PRUmUgLFU3HvK342Q6CDjb2rv2Ff3wleRmkw9Qa_WbyX-qPMXUEW7AuWiSznL8QBO0q_HKUERgq5apSdkQ
+2021-03-30 10:32:58.510|ERROR|exchange_token|error_no_code_found
+2021-03-30 10:32:58.512|INFO|exchange_token|auth_code=abcdef
+2021-03-30 10:32:59.861|ERROR|exchange_token_exception
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/views.py", line 30, in exchange_token
+    token = get_access_token(auth_code)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 11, in wrapper
+    return view_fn(client, *args, **kwargs)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 22, in get_access_token
+    resp = client.get_access_token(auth_code)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/client.py", line 82, in get_access_token
+    resp = self.request(api_url, method="POST", auth_header=auth_header, data=params)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/client.py", line 49, in request
+    response.raise_for_status()
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://test.api.myinfo.gov.sg/com/v3/token
+2021-03-30 10:32:59.869|ERROR|get_user_info|error_no_token_found
+2021-03-30 10:32:59.872|INFO|exchange_token|token=abcdef
+2021-03-30 10:32:59.872|ERROR|get_user_info_exception
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/jwt/api_jws.py", line 180, in _load
+    signing_input, crypto_segment = jwt.rsplit(b'.', 1)
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/views.py", line 47, in get_user_info
+    user_info = client_get_user_info(token)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 11, in wrapper
+    return view_fn(client, *args, **kwargs)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 29, in get_user_info
+    decoded_access_token = get_decoded_access_token(token)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/security.py", line 73, in get_decoded_access_token
+    return jwt.decode(
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/jwt/api_jwt.py", line 84, in decode
+    payload, _, _, _ = self._load(jwt)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/jwt/api_jws.py", line 183, in _load
+    raise DecodeError('Not enough segments')
+jwt.exceptions.DecodeError: Not enough segments
+2021-03-30 10:33:04.645|INFO|exchange_token|auth_code=0c3f67ec7b4b60ab84940c35760b099d5bafe7fb
+2021-03-30 10:33:06.080|ERROR|exchange_token_exception
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/views.py", line 30, in exchange_token
+    token = get_access_token(auth_code)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 11, in wrapper
+    return view_fn(client, *args, **kwargs)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 22, in get_access_token
+    resp = client.get_access_token(auth_code)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/client.py", line 82, in get_access_token
+    resp = self.request(api_url, method="POST", auth_header=auth_header, data=params)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/client.py", line 49, in request
+    response.raise_for_status()
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://test.api.myinfo.gov.sg/com/v3/token
+2021-03-30 10:33:06.086|ERROR|exchange_token|error_no_code_found
+2021-03-30 10:33:06.088|INFO|exchange_token|auth_code=abcdef
+2021-03-30 10:33:07.465|ERROR|exchange_token_exception
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/views.py", line 30, in exchange_token
+    token = get_access_token(auth_code)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 11, in wrapper
+    return view_fn(client, *args, **kwargs)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 22, in get_access_token
+    resp = client.get_access_token(auth_code)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/client.py", line 82, in get_access_token
+    resp = self.request(api_url, method="POST", auth_header=auth_header, data=params)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/client.py", line 49, in request
+    response.raise_for_status()
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://test.api.myinfo.gov.sg/com/v3/token
+2021-03-30 10:33:07.471|ERROR|get_user_info|error_no_token_found
+2021-03-30 10:33:07.473|INFO|exchange_token|token=abcdef
+2021-03-30 10:33:07.473|ERROR|get_user_info_exception
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/jwt/api_jws.py", line 180, in _load
+    signing_input, crypto_segment = jwt.rsplit(b'.', 1)
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/views.py", line 47, in get_user_info
+    user_info = client_get_user_info(token)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 11, in wrapper
+    return view_fn(client, *args, **kwargs)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 29, in get_user_info
+    decoded_access_token = get_decoded_access_token(token)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/security.py", line 73, in get_decoded_access_token
+    return jwt.decode(
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/jwt/api_jwt.py", line 84, in decode
+    payload, _, _, _ = self._load(jwt)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/jwt/api_jws.py", line 183, in _load
+    raise DecodeError('Not enough segments')
+jwt.exceptions.DecodeError: Not enough segments
+2021-03-30 10:33:23.313|INFO|exchange_token|auth_code=0c3f67ec7b4b60ab84940c35760b099d5bafe7fb
+2021-03-30 10:33:24.894|ERROR|exchange_token_exception
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/views.py", line 30, in exchange_token
+    token = get_access_token(auth_code)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 11, in wrapper
+    return view_fn(client, *args, **kwargs)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 22, in get_access_token
+    resp = client.get_access_token(auth_code)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/client.py", line 82, in get_access_token
+    resp = self.request(api_url, method="POST", auth_header=auth_header, data=params)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/client.py", line 49, in request
+    response.raise_for_status()
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://test.api.myinfo.gov.sg/com/v3/token
+2021-03-30 18:35:44.513|INFO|exchange_token|auth_code=77333673af6017d684b5e6e24242974d9832b2cb
+2021-03-30 18:35:46.135|INFO|exchange_token|auth_code=77333673af6017d684b5e6e24242974d9832b2cb,token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Il9SQzZ4d09NdmJ0dDZhald1WmU2R2xncy1qM3dtNXJpQXlDVW9SYXNhLUkifQ.eyJzdWIiOiJ4NWRhMmNjN2MtOGQ2ZS0xZWFmLTI3NzItZjg4MTY0ZWEyOThkIiwianRpIjoiU1RObThXeHp5Yno0MHhaMUxaVThoTzZ1VGhKV0tsQjB4TWJCUHRQdCIsInNjb3BlIjpbInVpbmZpbiIsIm5hbWUiLCJzZXgiLCJyYWNlIiwibmF0aW9uYWxpdHkiLCJkb2IiLCJlbWFpbCIsIm1vYmlsZW5vIiwicmVnYWRkIiwiaG91c2luZ3R5cGUiLCJoZGJ0eXBlIiwibWFyaXRhbCIsImVkdWxldmVsIiwib3duZXJwcml2YXRlIiwiY3BmY29udHJpYnV0aW9ucyIsImNwZmJhbGFuY2VzIiwiYmlydGhjb3VudHJ5IiwicmVzaWRlbnRpYWxzdGF0dXMiLCJhbGlhc25hbWUiLCJtYXJyaWVkbmFtZSIsInBhc3N0eXBlIiwiZW1wbG95bWVudHNlY3RvciIsIm5vYWhpc3RvcnkiXSwidG9rZW5OYW1lIjoiYWNjZXNzX3Rva2VuIiwidG9rZW5fdHlwZSI6IkJlYXJlciIsImdyYW50X3R5cGUiOiJhdXRob3JpemF0aW9uX2NvZGUiLCJleHBpcmVzX2luIjoxODAwLCJhdWQiOiJTVEcyLU1ZSU5GTy1TRUxGLVRFU1QiLCJyZWFsbSI6Im15aW5mby1jb20iLCJpc3MiOiJodHRwczovL3Rlc3QuYXBpLm15aW5mby5nb3Yuc2cvc2VydmljZWF1dGgvbXlpbmZvLWNvbSIsImlhdCI6MTYxNzEwMDU0NiwibmJmIjoxNjE3MTAwNTQ2LCJleHAiOjE2MTcxMDIzNDZ9.ohjjtpXvfo3skqtyTLK_0p15dbK4hulIWFQroXE0d10DK-LUNkKDszeiRWm3hvdOjPnk0EaOfFftx3KCnnp3lBh7QBwgGeuHCW4hoMUB2hSSDRczf2-ZqxxNQYp9wFHDqjSEKSITMaQJF10AyWYkZtZvbtrD7AszLgu_Gcxk0PCGFiXlN_JUx7cIN3qISPpZJpc8xhAJyijOTMPnjVVW5EyPL18_CiRP7-AliX9q6aZDyFpFai2lgL_q3CLSdbTSt1DMaXOGCD55KU-Cx1FdrdlF32GaOPSLlAAm_S8fgYJMsvE1LQq2Cyc0XM-5xYqn0MsQTMAOO_e_bmUceTTa4Q
+2021-03-30 18:37:28.889|ERROR|exchange_token|error_no_code_found
+2021-03-30 18:37:28.891|INFO|exchange_token|auth_code=abcdef
+2021-03-30 18:37:32.731|ERROR|exchange_token_exception
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/views.py", line 30, in exchange_token
+    token = get_access_token(auth_code)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 11, in wrapper
+    return view_fn(client, *args, **kwargs)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 22, in get_access_token
+    resp = client.get_access_token(auth_code)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/client.py", line 82, in get_access_token
+    resp = self.request(api_url, method="POST", auth_header=auth_header, data=params)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/client.py", line 49, in request
+    response.raise_for_status()
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://test.api.myinfo.gov.sg/com/v3/token
+2021-03-30 18:37:32.736|INFO|get_user_info|token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Il9SQzZ4d09NdmJ0dDZhald1WmU2R2xncy1qM3dtNXJpQXlDVW9SYXNhLUkifQ.eyJzdWIiOiJ4NWRhMmNjN2MtOGQ2ZS0xZWFmLTI3NzItZjg4MTY0ZWEyOThkIiwianRpIjoiU1RObThXeHp5Yno0MHhaMUxaVThoTzZ1VGhKV0tsQjB4TWJCUHRQdCIsInNjb3BlIjpbInVpbmZpbiIsIm5hbWUiLCJzZXgiLCJyYWNlIiwibmF0aW9uYWxpdHkiLCJkb2IiLCJlbWFpbCIsIm1vYmlsZW5vIiwicmVnYWRkIiwiaG91c2luZ3R5cGUiLCJoZGJ0eXBlIiwibWFyaXRhbCIsImVkdWxldmVsIiwib3duZXJwcml2YXRlIiwiY3BmY29udHJpYnV0aW9ucyIsImNwZmJhbGFuY2VzIiwiYmlydGhjb3VudHJ5IiwicmVzaWRlbnRpYWxzdGF0dXMiLCJhbGlhc25hbWUiLCJtYXJyaWVkbmFtZSIsInBhc3N0eXBlIiwiZW1wbG95bWVudHNlY3RvciIsIm5vYWhpc3RvcnkiXSwidG9rZW5OYW1lIjoiYWNjZXNzX3Rva2VuIiwidG9rZW5fdHlwZSI6IkJlYXJlciIsImdyYW50X3R5cGUiOiJhdXRob3JpemF0aW9uX2NvZGUiLCJleHBpcmVzX2luIjoxODAwLCJhdWQiOiJTVEcyLU1ZSU5GTy1TRUxGLVRFU1QiLCJyZWFsbSI6Im15aW5mby1jb20iLCJpc3MiOiJodHRwczovL3Rlc3QuYXBpLm15aW5mby5nb3Yuc2cvc2VydmljZWF1dGgvbXlpbmZvLWNvbSIsImlhdCI6MTYxNzEwMDU0NiwibmJmIjoxNjE3MTAwNTQ2LCJleHAiOjE2MTcxMDIzNDZ9.ohjjtpXvfo3skqtyTLK_0p15dbK4hulIWFQroXE0d10DK-LUNkKDszeiRWm3hvdOjPnk0EaOfFftx3KCnnp3lBh7QBwgGeuHCW4hoMUB2hSSDRczf2-ZqxxNQYp9wFHDqjSEKSITMaQJF10AyWYkZtZvbtrD7AszLgu_Gcxk0PCGFiXlN_JUx7cIN3qISPpZJpc8xhAJyijOTMPnjVVW5EyPL18_CiRP7-AliX9q6aZDyFpFai2lgL_q3CLSdbTSt1DMaXOGCD55KU-Cx1FdrdlF32GaOPSLlAAm_S8fgYJMsvE1LQq2Cyc0XM-5xYqn0MsQTMAOO_e_bmUceTTa4Q
+2021-03-30 18:37:34.853|INFO|get_user_info|token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Il9SQzZ4d09NdmJ0dDZhald1WmU2R2xncy1qM3dtNXJpQXlDVW9SYXNhLUkifQ.eyJzdWIiOiJ4NWRhMmNjN2MtOGQ2ZS0xZWFmLTI3NzItZjg4MTY0ZWEyOThkIiwianRpIjoiU1RObThXeHp5Yno0MHhaMUxaVThoTzZ1VGhKV0tsQjB4TWJCUHRQdCIsInNjb3BlIjpbInVpbmZpbiIsIm5hbWUiLCJzZXgiLCJyYWNlIiwibmF0aW9uYWxpdHkiLCJkb2IiLCJlbWFpbCIsIm1vYmlsZW5vIiwicmVnYWRkIiwiaG91c2luZ3R5cGUiLCJoZGJ0eXBlIiwibWFyaXRhbCIsImVkdWxldmVsIiwib3duZXJwcml2YXRlIiwiY3BmY29udHJpYnV0aW9ucyIsImNwZmJhbGFuY2VzIiwiYmlydGhjb3VudHJ5IiwicmVzaWRlbnRpYWxzdGF0dXMiLCJhbGlhc25hbWUiLCJtYXJyaWVkbmFtZSIsInBhc3N0eXBlIiwiZW1wbG95bWVudHNlY3RvciIsIm5vYWhpc3RvcnkiXSwidG9rZW5OYW1lIjoiYWNjZXNzX3Rva2VuIiwidG9rZW5fdHlwZSI6IkJlYXJlciIsImdyYW50X3R5cGUiOiJhdXRob3JpemF0aW9uX2NvZGUiLCJleHBpcmVzX2luIjoxODAwLCJhdWQiOiJTVEcyLU1ZSU5GTy1TRUxGLVRFU1QiLCJyZWFsbSI6Im15aW5mby1jb20iLCJpc3MiOiJodHRwczovL3Rlc3QuYXBpLm15aW5mby5nb3Yuc2cvc2VydmljZWF1dGgvbXlpbmZvLWNvbSIsImlhdCI6MTYxNzEwMDU0NiwibmJmIjoxNjE3MTAwNTQ2LCJleHAiOjE2MTcxMDIzNDZ9.ohjjtpXvfo3skqtyTLK_0p15dbK4hulIWFQroXE0d10DK-LUNkKDszeiRWm3hvdOjPnk0EaOfFftx3KCnnp3lBh7QBwgGeuHCW4hoMUB2hSSDRczf2-ZqxxNQYp9wFHDqjSEKSITMaQJF10AyWYkZtZvbtrD7AszLgu_Gcxk0PCGFiXlN_JUx7cIN3qISPpZJpc8xhAJyijOTMPnjVVW5EyPL18_CiRP7-AliX9q6aZDyFpFai2lgL_q3CLSdbTSt1DMaXOGCD55KU-Cx1FdrdlF32GaOPSLlAAm_S8fgYJMsvE1LQq2Cyc0XM-5xYqn0MsQTMAOO_e_bmUceTTa4Q,user_info={'uinfin': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': 'S3100052A'}, 'name': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': 'TAN HENG HUAT'}, 'sex': {'lastupdated': '2021-03-30', 'code': 'F', 'source': '1', 'classification': 'C', 'desc': 'FEMALE'}, 'race': {'lastupdated': '2021-03-30', 'code': 'CN', 'source': '1', 'classification': 'C', 'desc': 'CHINESE'}, 'nationality': {'lastupdated': '2021-03-30', 'code': 'SG', 'source': '1', 'classification': 'C', 'desc': 'SINGAPORE CITIZEN'}, 'dob': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': '1998-06-06'}, 'email': {'lastupdated': '2021-03-30', 'source': '4', 'classification': 'C', 'value': 'myinfotesting@gmail.com'}, 'mobileno': {'lastupdated': '2021-03-30', 'source': '4', 'classification': 'C', 'areacode': {'value': '65'}, 'prefix': {'value': '+'}, 'nbr': {'value': '97399245'}}, 'regadd': {'country': {'code': 'SG', 'desc': 'SINGAPORE'}, 'unit': {'value': '128'}, 'street': {'value': 'BEDOK NORTH AVENUE 4'}, 'lastupdated': '2021-03-30', 'block': {'value': '102'}, 'source': '1', 'postal': {'value': '460102'}, 'classification': 'C', 'floor': {'value': '09'}, 'type': 'SG', 'building': {'value': 'PEARL GARDEN'}}, 'housingtype': {'lastupdated': '2021-03-30', 'code': '', 'source': '1', 'classification': 'C', 'desc': ''}, 'hdbtype': {'lastupdated': '2021-03-30', 'code': '113', 'source': '1', 'classification': 'C', 'desc': '3-ROOM FLAT (HDB)'}, 'marital': {'lastupdated': '2021-03-30', 'code': '', 'source': '1', 'classification': 'C', 'desc': ''}, 'edulevel': {'lastupdated': '2021-03-30', 'code': '', 'source': '2', 'classification': 'C', 'desc': ''}, 'ownerprivate': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': 'false'}, 'cpfcontributions': {'lastupdated': '2021-03-30', 'source': '1', 'history': [{'date': {'value': '2020-01-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-01'}}, {'date': {'value': '2020-02-29'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-02'}}, {'date': {'value': '2020-03-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 2850}, 'month': {'value': '2020-03'}}, {'date': {'value': '2020-04-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-04'}}, {'date': {'value': '2020-05-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-05'}}, {'date': {'value': '2020-06-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-06'}}, {'date': {'value': '2020-07-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 5700}, 'month': {'value': '2020-07'}}, {'date': {'value': '2020-08-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-08'}}, {'date': {'value': '2020-09-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-09'}}, {'date': {'value': '2020-10-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-10'}}, {'date': {'value': '2020-11-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-11'}}, {'date': {'value': '2020-12-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-12'}}, {'date': {'value': '2021-01-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2021-01'}}, {'date': {'value': '2021-02-28'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2021-02'}}, {'date': {'value': '2021-03-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 3150}, 'month': {'value': '2021-03'}}], 'classification': 'C'}, 'cpfbalances': {'lastupdated': '2021-03-30', 'oa': {'value': 58839.75}, 'source': '1', 'classification': 'C', 'ma': {'value': 20466}, 'sa': {'value': 15349.5}}, 'birthcountry': {'lastupdated': '2021-03-30', 'code': 'SG', 'source': '1', 'classification': 'C', 'desc': 'SINGAPORE'}, 'residentialstatus': {'lastupdated': '2021-03-30', 'code': 'C', 'source': '1', 'classification': 'C', 'desc': 'CITIZEN'}, 'aliasname': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': 'TRICIA TAN XIAO HUI'}, 'marriedname': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': ''}, 'passtype': {'lastupdated': '2021-03-30', 'code': '', 'source': '3', 'classification': 'C', 'desc': ''}, 'employmentsector': {'lastupdated': '2021-03-30', 'source': '3', 'classification': 'C', 'value': ''}, 'noahistory': {'noas': [{'amount': {'value': 64400}, 'trade': {'value': 0}, 'interest': {'value': 0}, 'yearofassessment': {'value': '2020'}, 'taxclearance': {'value': 'N'}, 'employment': {'value': 64400}, 'rent': {'value': 0}, 'category': {'value': 'ORIGINAL'}}, {'amount': {'value': 53700}, 'trade': {'value': 0}, 'interest': {'value': 0}, 'yearofassessment': {'value': '2019'}, 'taxclearance': {'value': 'N'}, 'employment': {'value': 36112.8}, 'rent': {'value': 0}, 'category': {'value': 'ORIGINAL'}}], 'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C'}}
+2021-03-30 18:37:34.856|ERROR|get_user_info|error_no_token_found
+2021-03-30 18:37:34.859|INFO|get_user_info|token=abcdef
+2021-03-30 18:37:34.859|ERROR|get_user_info_exception
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/jwt/api_jws.py", line 180, in _load
+    signing_input, crypto_segment = jwt.rsplit(b'.', 1)
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/views.py", line 47, in get_user_info
+    user_info = client_get_user_info(token)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 11, in wrapper
+    return view_fn(client, *args, **kwargs)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 29, in get_user_info
+    decoded_access_token = get_decoded_access_token(token)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/security.py", line 73, in get_decoded_access_token
+    return jwt.decode(
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/jwt/api_jwt.py", line 84, in decode
+    payload, _, _, _ = self._load(jwt)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/jwt/api_jws.py", line 183, in _load
+    raise DecodeError('Not enough segments')
+jwt.exceptions.DecodeError: Not enough segments
+2021-03-30 18:38:04.571|INFO|get_user_info|token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Il9SQzZ4d09NdmJ0dDZhald1WmU2R2xncy1qM3dtNXJpQXlDVW9SYXNhLUkifQ.eyJzdWIiOiJ4NWRhMmNjN2MtOGQ2ZS0xZWFmLTI3NzItZjg4MTY0ZWEyOThkIiwianRpIjoiU1RObThXeHp5Yno0MHhaMUxaVThoTzZ1VGhKV0tsQjB4TWJCUHRQdCIsInNjb3BlIjpbInVpbmZpbiIsIm5hbWUiLCJzZXgiLCJyYWNlIiwibmF0aW9uYWxpdHkiLCJkb2IiLCJlbWFpbCIsIm1vYmlsZW5vIiwicmVnYWRkIiwiaG91c2luZ3R5cGUiLCJoZGJ0eXBlIiwibWFyaXRhbCIsImVkdWxldmVsIiwib3duZXJwcml2YXRlIiwiY3BmY29udHJpYnV0aW9ucyIsImNwZmJhbGFuY2VzIiwiYmlydGhjb3VudHJ5IiwicmVzaWRlbnRpYWxzdGF0dXMiLCJhbGlhc25hbWUiLCJtYXJyaWVkbmFtZSIsInBhc3N0eXBlIiwiZW1wbG95bWVudHNlY3RvciIsIm5vYWhpc3RvcnkiXSwidG9rZW5OYW1lIjoiYWNjZXNzX3Rva2VuIiwidG9rZW5fdHlwZSI6IkJlYXJlciIsImdyYW50X3R5cGUiOiJhdXRob3JpemF0aW9uX2NvZGUiLCJleHBpcmVzX2luIjoxODAwLCJhdWQiOiJTVEcyLU1ZSU5GTy1TRUxGLVRFU1QiLCJyZWFsbSI6Im15aW5mby1jb20iLCJpc3MiOiJodHRwczovL3Rlc3QuYXBpLm15aW5mby5nb3Yuc2cvc2VydmljZWF1dGgvbXlpbmZvLWNvbSIsImlhdCI6MTYxNzEwMDU0NiwibmJmIjoxNjE3MTAwNTQ2LCJleHAiOjE2MTcxMDIzNDZ9.ohjjtpXvfo3skqtyTLK_0p15dbK4hulIWFQroXE0d10DK-LUNkKDszeiRWm3hvdOjPnk0EaOfFftx3KCnnp3lBh7QBwgGeuHCW4hoMUB2hSSDRczf2-ZqxxNQYp9wFHDqjSEKSITMaQJF10AyWYkZtZvbtrD7AszLgu_Gcxk0PCGFiXlN_JUx7cIN3qISPpZJpc8xhAJyijOTMPnjVVW5EyPL18_CiRP7-AliX9q6aZDyFpFai2lgL_q3CLSdbTSt1DMaXOGCD55KU-Cx1FdrdlF32GaOPSLlAAm_S8fgYJMsvE1LQq2Cyc0XM-5xYqn0MsQTMAOO_e_bmUceTTa4Q
+2021-03-30 18:38:06.595|INFO|get_user_info|token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Il9SQzZ4d09NdmJ0dDZhald1WmU2R2xncy1qM3dtNXJpQXlDVW9SYXNhLUkifQ.eyJzdWIiOiJ4NWRhMmNjN2MtOGQ2ZS0xZWFmLTI3NzItZjg4MTY0ZWEyOThkIiwianRpIjoiU1RObThXeHp5Yno0MHhaMUxaVThoTzZ1VGhKV0tsQjB4TWJCUHRQdCIsInNjb3BlIjpbInVpbmZpbiIsIm5hbWUiLCJzZXgiLCJyYWNlIiwibmF0aW9uYWxpdHkiLCJkb2IiLCJlbWFpbCIsIm1vYmlsZW5vIiwicmVnYWRkIiwiaG91c2luZ3R5cGUiLCJoZGJ0eXBlIiwibWFyaXRhbCIsImVkdWxldmVsIiwib3duZXJwcml2YXRlIiwiY3BmY29udHJpYnV0aW9ucyIsImNwZmJhbGFuY2VzIiwiYmlydGhjb3VudHJ5IiwicmVzaWRlbnRpYWxzdGF0dXMiLCJhbGlhc25hbWUiLCJtYXJyaWVkbmFtZSIsInBhc3N0eXBlIiwiZW1wbG95bWVudHNlY3RvciIsIm5vYWhpc3RvcnkiXSwidG9rZW5OYW1lIjoiYWNjZXNzX3Rva2VuIiwidG9rZW5fdHlwZSI6IkJlYXJlciIsImdyYW50X3R5cGUiOiJhdXRob3JpemF0aW9uX2NvZGUiLCJleHBpcmVzX2luIjoxODAwLCJhdWQiOiJTVEcyLU1ZSU5GTy1TRUxGLVRFU1QiLCJyZWFsbSI6Im15aW5mby1jb20iLCJpc3MiOiJodHRwczovL3Rlc3QuYXBpLm15aW5mby5nb3Yuc2cvc2VydmljZWF1dGgvbXlpbmZvLWNvbSIsImlhdCI6MTYxNzEwMDU0NiwibmJmIjoxNjE3MTAwNTQ2LCJleHAiOjE2MTcxMDIzNDZ9.ohjjtpXvfo3skqtyTLK_0p15dbK4hulIWFQroXE0d10DK-LUNkKDszeiRWm3hvdOjPnk0EaOfFftx3KCnnp3lBh7QBwgGeuHCW4hoMUB2hSSDRczf2-ZqxxNQYp9wFHDqjSEKSITMaQJF10AyWYkZtZvbtrD7AszLgu_Gcxk0PCGFiXlN_JUx7cIN3qISPpZJpc8xhAJyijOTMPnjVVW5EyPL18_CiRP7-AliX9q6aZDyFpFai2lgL_q3CLSdbTSt1DMaXOGCD55KU-Cx1FdrdlF32GaOPSLlAAm_S8fgYJMsvE1LQq2Cyc0XM-5xYqn0MsQTMAOO_e_bmUceTTa4Q,user_info={'uinfin': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': 'S3100052A'}, 'name': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': 'TAN HENG HUAT'}, 'sex': {'lastupdated': '2021-03-30', 'code': 'F', 'source': '1', 'classification': 'C', 'desc': 'FEMALE'}, 'race': {'lastupdated': '2021-03-30', 'code': 'CN', 'source': '1', 'classification': 'C', 'desc': 'CHINESE'}, 'nationality': {'lastupdated': '2021-03-30', 'code': 'SG', 'source': '1', 'classification': 'C', 'desc': 'SINGAPORE CITIZEN'}, 'dob': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': '1998-06-06'}, 'email': {'lastupdated': '2021-03-30', 'source': '4', 'classification': 'C', 'value': 'myinfotesting@gmail.com'}, 'mobileno': {'lastupdated': '2021-03-30', 'source': '4', 'classification': 'C', 'areacode': {'value': '65'}, 'prefix': {'value': '+'}, 'nbr': {'value': '97399245'}}, 'regadd': {'country': {'code': 'SG', 'desc': 'SINGAPORE'}, 'unit': {'value': '128'}, 'street': {'value': 'BEDOK NORTH AVENUE 4'}, 'lastupdated': '2021-03-30', 'block': {'value': '102'}, 'source': '1', 'postal': {'value': '460102'}, 'classification': 'C', 'floor': {'value': '09'}, 'type': 'SG', 'building': {'value': 'PEARL GARDEN'}}, 'housingtype': {'lastupdated': '2021-03-30', 'code': '', 'source': '1', 'classification': 'C', 'desc': ''}, 'hdbtype': {'lastupdated': '2021-03-30', 'code': '113', 'source': '1', 'classification': 'C', 'desc': '3-ROOM FLAT (HDB)'}, 'marital': {'lastupdated': '2021-03-30', 'code': '', 'source': '1', 'classification': 'C', 'desc': ''}, 'edulevel': {'lastupdated': '2021-03-30', 'code': '', 'source': '2', 'classification': 'C', 'desc': ''}, 'ownerprivate': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': 'false'}, 'cpfcontributions': {'lastupdated': '2021-03-30', 'source': '1', 'history': [{'date': {'value': '2020-01-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-01'}}, {'date': {'value': '2020-02-29'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-02'}}, {'date': {'value': '2020-03-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 2850}, 'month': {'value': '2020-03'}}, {'date': {'value': '2020-04-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-04'}}, {'date': {'value': '2020-05-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-05'}}, {'date': {'value': '2020-06-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-06'}}, {'date': {'value': '2020-07-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 5700}, 'month': {'value': '2020-07'}}, {'date': {'value': '2020-08-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-08'}}, {'date': {'value': '2020-09-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-09'}}, {'date': {'value': '2020-10-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-10'}}, {'date': {'value': '2020-11-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-11'}}, {'date': {'value': '2020-12-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-12'}}, {'date': {'value': '2021-01-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2021-01'}}, {'date': {'value': '2021-02-28'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2021-02'}}, {'date': {'value': '2021-03-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 3150}, 'month': {'value': '2021-03'}}], 'classification': 'C'}, 'cpfbalances': {'lastupdated': '2021-03-30', 'oa': {'value': 58839.75}, 'source': '1', 'classification': 'C', 'ma': {'value': 20466}, 'sa': {'value': 15349.5}}, 'birthcountry': {'lastupdated': '2021-03-30', 'code': 'SG', 'source': '1', 'classification': 'C', 'desc': 'SINGAPORE'}, 'residentialstatus': {'lastupdated': '2021-03-30', 'code': 'C', 'source': '1', 'classification': 'C', 'desc': 'CITIZEN'}, 'aliasname': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': 'TRICIA TAN XIAO HUI'}, 'marriedname': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': ''}, 'passtype': {'lastupdated': '2021-03-30', 'code': '', 'source': '3', 'classification': 'C', 'desc': ''}, 'employmentsector': {'lastupdated': '2021-03-30', 'source': '3', 'classification': 'C', 'value': ''}, 'noahistory': {'noas': [{'amount': {'value': 64400}, 'trade': {'value': 0}, 'interest': {'value': 0}, 'yearofassessment': {'value': '2020'}, 'taxclearance': {'value': 'N'}, 'employment': {'value': 64400}, 'rent': {'value': 0}, 'category': {'value': 'ORIGINAL'}}, {'amount': {'value': 53700}, 'trade': {'value': 0}, 'interest': {'value': 0}, 'yearofassessment': {'value': '2019'}, 'taxclearance': {'value': 'N'}, 'employment': {'value': 36112.8}, 'rent': {'value': 0}, 'category': {'value': 'ORIGINAL'}}], 'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C'}}
+2021-03-30 18:38:21.463|INFO|get_user_info|token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Il9SQzZ4d09NdmJ0dDZhald1WmU2R2xncy1qM3dtNXJpQXlDVW9SYXNhLUkifQ.eyJzdWIiOiJ4NWRhMmNjN2MtOGQ2ZS0xZWFmLTI3NzItZjg4MTY0ZWEyOThkIiwianRpIjoiU1RObThXeHp5Yno0MHhaMUxaVThoTzZ1VGhKV0tsQjB4TWJCUHRQdCIsInNjb3BlIjpbInVpbmZpbiIsIm5hbWUiLCJzZXgiLCJyYWNlIiwibmF0aW9uYWxpdHkiLCJkb2IiLCJlbWFpbCIsIm1vYmlsZW5vIiwicmVnYWRkIiwiaG91c2luZ3R5cGUiLCJoZGJ0eXBlIiwibWFyaXRhbCIsImVkdWxldmVsIiwib3duZXJwcml2YXRlIiwiY3BmY29udHJpYnV0aW9ucyIsImNwZmJhbGFuY2VzIiwiYmlydGhjb3VudHJ5IiwicmVzaWRlbnRpYWxzdGF0dXMiLCJhbGlhc25hbWUiLCJtYXJyaWVkbmFtZSIsInBhc3N0eXBlIiwiZW1wbG95bWVudHNlY3RvciIsIm5vYWhpc3RvcnkiXSwidG9rZW5OYW1lIjoiYWNjZXNzX3Rva2VuIiwidG9rZW5fdHlwZSI6IkJlYXJlciIsImdyYW50X3R5cGUiOiJhdXRob3JpemF0aW9uX2NvZGUiLCJleHBpcmVzX2luIjoxODAwLCJhdWQiOiJTVEcyLU1ZSU5GTy1TRUxGLVRFU1QiLCJyZWFsbSI6Im15aW5mby1jb20iLCJpc3MiOiJodHRwczovL3Rlc3QuYXBpLm15aW5mby5nb3Yuc2cvc2VydmljZWF1dGgvbXlpbmZvLWNvbSIsImlhdCI6MTYxNzEwMDU0NiwibmJmIjoxNjE3MTAwNTQ2LCJleHAiOjE2MTcxMDIzNDZ9.ohjjtpXvfo3skqtyTLK_0p15dbK4hulIWFQroXE0d10DK-LUNkKDszeiRWm3hvdOjPnk0EaOfFftx3KCnnp3lBh7QBwgGeuHCW4hoMUB2hSSDRczf2-ZqxxNQYp9wFHDqjSEKSITMaQJF10AyWYkZtZvbtrD7AszLgu_Gcxk0PCGFiXlN_JUx7cIN3qISPpZJpc8xhAJyijOTMPnjVVW5EyPL18_CiRP7-AliX9q6aZDyFpFai2lgL_q3CLSdbTSt1DMaXOGCD55KU-Cx1FdrdlF32GaOPSLlAAm_S8fgYJMsvE1LQq2Cyc0XM-5xYqn0MsQTMAOO_e_bmUceTTa4Q
+2021-03-30 18:38:23.427|INFO|get_user_info|token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Il9SQzZ4d09NdmJ0dDZhald1WmU2R2xncy1qM3dtNXJpQXlDVW9SYXNhLUkifQ.eyJzdWIiOiJ4NWRhMmNjN2MtOGQ2ZS0xZWFmLTI3NzItZjg4MTY0ZWEyOThkIiwianRpIjoiU1RObThXeHp5Yno0MHhaMUxaVThoTzZ1VGhKV0tsQjB4TWJCUHRQdCIsInNjb3BlIjpbInVpbmZpbiIsIm5hbWUiLCJzZXgiLCJyYWNlIiwibmF0aW9uYWxpdHkiLCJkb2IiLCJlbWFpbCIsIm1vYmlsZW5vIiwicmVnYWRkIiwiaG91c2luZ3R5cGUiLCJoZGJ0eXBlIiwibWFyaXRhbCIsImVkdWxldmVsIiwib3duZXJwcml2YXRlIiwiY3BmY29udHJpYnV0aW9ucyIsImNwZmJhbGFuY2VzIiwiYmlydGhjb3VudHJ5IiwicmVzaWRlbnRpYWxzdGF0dXMiLCJhbGlhc25hbWUiLCJtYXJyaWVkbmFtZSIsInBhc3N0eXBlIiwiZW1wbG95bWVudHNlY3RvciIsIm5vYWhpc3RvcnkiXSwidG9rZW5OYW1lIjoiYWNjZXNzX3Rva2VuIiwidG9rZW5fdHlwZSI6IkJlYXJlciIsImdyYW50X3R5cGUiOiJhdXRob3JpemF0aW9uX2NvZGUiLCJleHBpcmVzX2luIjoxODAwLCJhdWQiOiJTVEcyLU1ZSU5GTy1TRUxGLVRFU1QiLCJyZWFsbSI6Im15aW5mby1jb20iLCJpc3MiOiJodHRwczovL3Rlc3QuYXBpLm15aW5mby5nb3Yuc2cvc2VydmljZWF1dGgvbXlpbmZvLWNvbSIsImlhdCI6MTYxNzEwMDU0NiwibmJmIjoxNjE3MTAwNTQ2LCJleHAiOjE2MTcxMDIzNDZ9.ohjjtpXvfo3skqtyTLK_0p15dbK4hulIWFQroXE0d10DK-LUNkKDszeiRWm3hvdOjPnk0EaOfFftx3KCnnp3lBh7QBwgGeuHCW4hoMUB2hSSDRczf2-ZqxxNQYp9wFHDqjSEKSITMaQJF10AyWYkZtZvbtrD7AszLgu_Gcxk0PCGFiXlN_JUx7cIN3qISPpZJpc8xhAJyijOTMPnjVVW5EyPL18_CiRP7-AliX9q6aZDyFpFai2lgL_q3CLSdbTSt1DMaXOGCD55KU-Cx1FdrdlF32GaOPSLlAAm_S8fgYJMsvE1LQq2Cyc0XM-5xYqn0MsQTMAOO_e_bmUceTTa4Q,user_info={'uinfin': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': 'S3100052A'}, 'name': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': 'TAN HENG HUAT'}, 'sex': {'lastupdated': '2021-03-30', 'code': 'F', 'source': '1', 'classification': 'C', 'desc': 'FEMALE'}, 'race': {'lastupdated': '2021-03-30', 'code': 'CN', 'source': '1', 'classification': 'C', 'desc': 'CHINESE'}, 'nationality': {'lastupdated': '2021-03-30', 'code': 'SG', 'source': '1', 'classification': 'C', 'desc': 'SINGAPORE CITIZEN'}, 'dob': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': '1998-06-06'}, 'email': {'lastupdated': '2021-03-30', 'source': '4', 'classification': 'C', 'value': 'myinfotesting@gmail.com'}, 'mobileno': {'lastupdated': '2021-03-30', 'source': '4', 'classification': 'C', 'areacode': {'value': '65'}, 'prefix': {'value': '+'}, 'nbr': {'value': '97399245'}}, 'regadd': {'country': {'code': 'SG', 'desc': 'SINGAPORE'}, 'unit': {'value': '128'}, 'street': {'value': 'BEDOK NORTH AVENUE 4'}, 'lastupdated': '2021-03-30', 'block': {'value': '102'}, 'source': '1', 'postal': {'value': '460102'}, 'classification': 'C', 'floor': {'value': '09'}, 'type': 'SG', 'building': {'value': 'PEARL GARDEN'}}, 'housingtype': {'lastupdated': '2021-03-30', 'code': '', 'source': '1', 'classification': 'C', 'desc': ''}, 'hdbtype': {'lastupdated': '2021-03-30', 'code': '113', 'source': '1', 'classification': 'C', 'desc': '3-ROOM FLAT (HDB)'}, 'marital': {'lastupdated': '2021-03-30', 'code': '', 'source': '1', 'classification': 'C', 'desc': ''}, 'edulevel': {'lastupdated': '2021-03-30', 'code': '', 'source': '2', 'classification': 'C', 'desc': ''}, 'ownerprivate': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': 'false'}, 'cpfcontributions': {'lastupdated': '2021-03-30', 'source': '1', 'history': [{'date': {'value': '2020-01-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-01'}}, {'date': {'value': '2020-02-29'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-02'}}, {'date': {'value': '2020-03-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 2850}, 'month': {'value': '2020-03'}}, {'date': {'value': '2020-04-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-04'}}, {'date': {'value': '2020-05-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-05'}}, {'date': {'value': '2020-06-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-06'}}, {'date': {'value': '2020-07-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 5700}, 'month': {'value': '2020-07'}}, {'date': {'value': '2020-08-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-08'}}, {'date': {'value': '2020-09-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-09'}}, {'date': {'value': '2020-10-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-10'}}, {'date': {'value': '2020-11-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-11'}}, {'date': {'value': '2020-12-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-12'}}, {'date': {'value': '2021-01-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2021-01'}}, {'date': {'value': '2021-02-28'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2021-02'}}, {'date': {'value': '2021-03-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 3150}, 'month': {'value': '2021-03'}}], 'classification': 'C'}, 'cpfbalances': {'lastupdated': '2021-03-30', 'oa': {'value': 58839.75}, 'source': '1', 'classification': 'C', 'ma': {'value': 20466}, 'sa': {'value': 15349.5}}, 'birthcountry': {'lastupdated': '2021-03-30', 'code': 'SG', 'source': '1', 'classification': 'C', 'desc': 'SINGAPORE'}, 'residentialstatus': {'lastupdated': '2021-03-30', 'code': 'C', 'source': '1', 'classification': 'C', 'desc': 'CITIZEN'}, 'aliasname': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': 'TRICIA TAN XIAO HUI'}, 'marriedname': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': ''}, 'passtype': {'lastupdated': '2021-03-30', 'code': '', 'source': '3', 'classification': 'C', 'desc': ''}, 'employmentsector': {'lastupdated': '2021-03-30', 'source': '3', 'classification': 'C', 'value': ''}, 'noahistory': {'noas': [{'amount': {'value': 64400}, 'trade': {'value': 0}, 'interest': {'value': 0}, 'yearofassessment': {'value': '2020'}, 'taxclearance': {'value': 'N'}, 'employment': {'value': 64400}, 'rent': {'value': 0}, 'category': {'value': 'ORIGINAL'}}, {'amount': {'value': 53700}, 'trade': {'value': 0}, 'interest': {'value': 0}, 'yearofassessment': {'value': '2019'}, 'taxclearance': {'value': 'N'}, 'employment': {'value': 36112.8}, 'rent': {'value': 0}, 'category': {'value': 'ORIGINAL'}}], 'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C'}}
+2021-03-30 18:39:02.465|ERROR|exchange_token|error_no_code_found
+2021-03-30 18:39:02.467|INFO|exchange_token|auth_code=abcdef
+2021-03-30 18:39:03.750|ERROR|exchange_token_exception
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/views.py", line 30, in exchange_token
+    token = get_access_token(auth_code)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 11, in wrapper
+    return view_fn(client, *args, **kwargs)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 22, in get_access_token
+    resp = client.get_access_token(auth_code)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/client.py", line 82, in get_access_token
+    resp = self.request(api_url, method="POST", auth_header=auth_header, data=params)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/client.py", line 49, in request
+    response.raise_for_status()
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://test.api.myinfo.gov.sg/com/v3/token
+2021-03-30 18:39:03.757|INFO|get_user_info|token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Il9SQzZ4d09NdmJ0dDZhald1WmU2R2xncy1qM3dtNXJpQXlDVW9SYXNhLUkifQ.eyJzdWIiOiJ4NWRhMmNjN2MtOGQ2ZS0xZWFmLTI3NzItZjg4MTY0ZWEyOThkIiwianRpIjoiU1RObThXeHp5Yno0MHhaMUxaVThoTzZ1VGhKV0tsQjB4TWJCUHRQdCIsInNjb3BlIjpbInVpbmZpbiIsIm5hbWUiLCJzZXgiLCJyYWNlIiwibmF0aW9uYWxpdHkiLCJkb2IiLCJlbWFpbCIsIm1vYmlsZW5vIiwicmVnYWRkIiwiaG91c2luZ3R5cGUiLCJoZGJ0eXBlIiwibWFyaXRhbCIsImVkdWxldmVsIiwib3duZXJwcml2YXRlIiwiY3BmY29udHJpYnV0aW9ucyIsImNwZmJhbGFuY2VzIiwiYmlydGhjb3VudHJ5IiwicmVzaWRlbnRpYWxzdGF0dXMiLCJhbGlhc25hbWUiLCJtYXJyaWVkbmFtZSIsInBhc3N0eXBlIiwiZW1wbG95bWVudHNlY3RvciIsIm5vYWhpc3RvcnkiXSwidG9rZW5OYW1lIjoiYWNjZXNzX3Rva2VuIiwidG9rZW5fdHlwZSI6IkJlYXJlciIsImdyYW50X3R5cGUiOiJhdXRob3JpemF0aW9uX2NvZGUiLCJleHBpcmVzX2luIjoxODAwLCJhdWQiOiJTVEcyLU1ZSU5GTy1TRUxGLVRFU1QiLCJyZWFsbSI6Im15aW5mby1jb20iLCJpc3MiOiJodHRwczovL3Rlc3QuYXBpLm15aW5mby5nb3Yuc2cvc2VydmljZWF1dGgvbXlpbmZvLWNvbSIsImlhdCI6MTYxNzEwMDU0NiwibmJmIjoxNjE3MTAwNTQ2LCJleHAiOjE2MTcxMDIzNDZ9.ohjjtpXvfo3skqtyTLK_0p15dbK4hulIWFQroXE0d10DK-LUNkKDszeiRWm3hvdOjPnk0EaOfFftx3KCnnp3lBh7QBwgGeuHCW4hoMUB2hSSDRczf2-ZqxxNQYp9wFHDqjSEKSITMaQJF10AyWYkZtZvbtrD7AszLgu_Gcxk0PCGFiXlN_JUx7cIN3qISPpZJpc8xhAJyijOTMPnjVVW5EyPL18_CiRP7-AliX9q6aZDyFpFai2lgL_q3CLSdbTSt1DMaXOGCD55KU-Cx1FdrdlF32GaOPSLlAAm_S8fgYJMsvE1LQq2Cyc0XM-5xYqn0MsQTMAOO_e_bmUceTTa4Q
+2021-03-30 18:39:05.647|INFO|get_user_info|token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Il9SQzZ4d09NdmJ0dDZhald1WmU2R2xncy1qM3dtNXJpQXlDVW9SYXNhLUkifQ.eyJzdWIiOiJ4NWRhMmNjN2MtOGQ2ZS0xZWFmLTI3NzItZjg4MTY0ZWEyOThkIiwianRpIjoiU1RObThXeHp5Yno0MHhaMUxaVThoTzZ1VGhKV0tsQjB4TWJCUHRQdCIsInNjb3BlIjpbInVpbmZpbiIsIm5hbWUiLCJzZXgiLCJyYWNlIiwibmF0aW9uYWxpdHkiLCJkb2IiLCJlbWFpbCIsIm1vYmlsZW5vIiwicmVnYWRkIiwiaG91c2luZ3R5cGUiLCJoZGJ0eXBlIiwibWFyaXRhbCIsImVkdWxldmVsIiwib3duZXJwcml2YXRlIiwiY3BmY29udHJpYnV0aW9ucyIsImNwZmJhbGFuY2VzIiwiYmlydGhjb3VudHJ5IiwicmVzaWRlbnRpYWxzdGF0dXMiLCJhbGlhc25hbWUiLCJtYXJyaWVkbmFtZSIsInBhc3N0eXBlIiwiZW1wbG95bWVudHNlY3RvciIsIm5vYWhpc3RvcnkiXSwidG9rZW5OYW1lIjoiYWNjZXNzX3Rva2VuIiwidG9rZW5fdHlwZSI6IkJlYXJlciIsImdyYW50X3R5cGUiOiJhdXRob3JpemF0aW9uX2NvZGUiLCJleHBpcmVzX2luIjoxODAwLCJhdWQiOiJTVEcyLU1ZSU5GTy1TRUxGLVRFU1QiLCJyZWFsbSI6Im15aW5mby1jb20iLCJpc3MiOiJodHRwczovL3Rlc3QuYXBpLm15aW5mby5nb3Yuc2cvc2VydmljZWF1dGgvbXlpbmZvLWNvbSIsImlhdCI6MTYxNzEwMDU0NiwibmJmIjoxNjE3MTAwNTQ2LCJleHAiOjE2MTcxMDIzNDZ9.ohjjtpXvfo3skqtyTLK_0p15dbK4hulIWFQroXE0d10DK-LUNkKDszeiRWm3hvdOjPnk0EaOfFftx3KCnnp3lBh7QBwgGeuHCW4hoMUB2hSSDRczf2-ZqxxNQYp9wFHDqjSEKSITMaQJF10AyWYkZtZvbtrD7AszLgu_Gcxk0PCGFiXlN_JUx7cIN3qISPpZJpc8xhAJyijOTMPnjVVW5EyPL18_CiRP7-AliX9q6aZDyFpFai2lgL_q3CLSdbTSt1DMaXOGCD55KU-Cx1FdrdlF32GaOPSLlAAm_S8fgYJMsvE1LQq2Cyc0XM-5xYqn0MsQTMAOO_e_bmUceTTa4Q,user_info={'uinfin': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': 'S3100052A'}, 'name': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': 'TAN HENG HUAT'}, 'sex': {'lastupdated': '2021-03-30', 'code': 'F', 'source': '1', 'classification': 'C', 'desc': 'FEMALE'}, 'race': {'lastupdated': '2021-03-30', 'code': 'CN', 'source': '1', 'classification': 'C', 'desc': 'CHINESE'}, 'nationality': {'lastupdated': '2021-03-30', 'code': 'SG', 'source': '1', 'classification': 'C', 'desc': 'SINGAPORE CITIZEN'}, 'dob': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': '1998-06-06'}, 'email': {'lastupdated': '2021-03-30', 'source': '4', 'classification': 'C', 'value': 'myinfotesting@gmail.com'}, 'mobileno': {'lastupdated': '2021-03-30', 'source': '4', 'classification': 'C', 'areacode': {'value': '65'}, 'prefix': {'value': '+'}, 'nbr': {'value': '97399245'}}, 'regadd': {'country': {'code': 'SG', 'desc': 'SINGAPORE'}, 'unit': {'value': '128'}, 'street': {'value': 'BEDOK NORTH AVENUE 4'}, 'lastupdated': '2021-03-30', 'block': {'value': '102'}, 'source': '1', 'postal': {'value': '460102'}, 'classification': 'C', 'floor': {'value': '09'}, 'type': 'SG', 'building': {'value': 'PEARL GARDEN'}}, 'housingtype': {'lastupdated': '2021-03-30', 'code': '', 'source': '1', 'classification': 'C', 'desc': ''}, 'hdbtype': {'lastupdated': '2021-03-30', 'code': '113', 'source': '1', 'classification': 'C', 'desc': '3-ROOM FLAT (HDB)'}, 'marital': {'lastupdated': '2021-03-30', 'code': '', 'source': '1', 'classification': 'C', 'desc': ''}, 'edulevel': {'lastupdated': '2021-03-30', 'code': '', 'source': '2', 'classification': 'C', 'desc': ''}, 'ownerprivate': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': 'false'}, 'cpfcontributions': {'lastupdated': '2021-03-30', 'source': '1', 'history': [{'date': {'value': '2020-01-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-01'}}, {'date': {'value': '2020-02-29'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-02'}}, {'date': {'value': '2020-03-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 2850}, 'month': {'value': '2020-03'}}, {'date': {'value': '2020-04-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-04'}}, {'date': {'value': '2020-05-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-05'}}, {'date': {'value': '2020-06-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1425}, 'month': {'value': '2020-06'}}, {'date': {'value': '2020-07-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 5700}, 'month': {'value': '2020-07'}}, {'date': {'value': '2020-08-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-08'}}, {'date': {'value': '2020-09-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-09'}}, {'date': {'value': '2020-10-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-10'}}, {'date': {'value': '2020-11-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-11'}}, {'date': {'value': '2020-12-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2020-12'}}, {'date': {'value': '2021-01-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2021-01'}}, {'date': {'value': '2021-02-28'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 1575}, 'month': {'value': '2021-02'}}, {'date': {'value': '2021-03-30'}, 'employer': {'value': 'CRYSTAL HORSE INVEST PTE LTD'}, 'amount': {'value': 3150}, 'month': {'value': '2021-03'}}], 'classification': 'C'}, 'cpfbalances': {'lastupdated': '2021-03-30', 'oa': {'value': 58839.75}, 'source': '1', 'classification': 'C', 'ma': {'value': 20466}, 'sa': {'value': 15349.5}}, 'birthcountry': {'lastupdated': '2021-03-30', 'code': 'SG', 'source': '1', 'classification': 'C', 'desc': 'SINGAPORE'}, 'residentialstatus': {'lastupdated': '2021-03-30', 'code': 'C', 'source': '1', 'classification': 'C', 'desc': 'CITIZEN'}, 'aliasname': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': 'TRICIA TAN XIAO HUI'}, 'marriedname': {'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C', 'value': ''}, 'passtype': {'lastupdated': '2021-03-30', 'code': '', 'source': '3', 'classification': 'C', 'desc': ''}, 'employmentsector': {'lastupdated': '2021-03-30', 'source': '3', 'classification': 'C', 'value': ''}, 'noahistory': {'noas': [{'amount': {'value': 64400}, 'trade': {'value': 0}, 'interest': {'value': 0}, 'yearofassessment': {'value': '2020'}, 'taxclearance': {'value': 'N'}, 'employment': {'value': 64400}, 'rent': {'value': 0}, 'category': {'value': 'ORIGINAL'}}, {'amount': {'value': 53700}, 'trade': {'value': 0}, 'interest': {'value': 0}, 'yearofassessment': {'value': '2019'}, 'taxclearance': {'value': 'N'}, 'employment': {'value': 36112.8}, 'rent': {'value': 0}, 'category': {'value': 'ORIGINAL'}}], 'lastupdated': '2021-03-30', 'source': '1', 'classification': 'C'}}
+2021-03-30 18:39:05.650|ERROR|get_user_info|error_no_token_found
+2021-03-30 18:39:05.652|INFO|get_user_info|token=abcdef
+2021-03-30 18:39:05.652|ERROR|get_user_info_exception
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/jwt/api_jws.py", line 180, in _load
+    signing_input, crypto_segment = jwt.rsplit(b'.', 1)
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/views.py", line 47, in get_user_info
+    user_info = client_get_user_info(token)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 11, in wrapper
+    return view_fn(client, *args, **kwargs)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/api/utils.py", line 29, in get_user_info
+    decoded_access_token = get_decoded_access_token(token)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/backend/myinfo/security.py", line 73, in get_decoded_access_token
+    return jwt.decode(
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/jwt/api_jwt.py", line 84, in decode
+    payload, _, _, _ = self._load(jwt)
+  File "/Users/nguyenbao/Downloads/ablr_coding_challenge/ablr_coding_challenge/env/lib/python3.9/site-packages/jwt/api_jws.py", line 183, in _load
+    raise DecodeError('Not enough segments')
+jwt.exceptions.DecodeError: Not enough segments
