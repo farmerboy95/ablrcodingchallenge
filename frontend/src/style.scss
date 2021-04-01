@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Karla:weight@400;700&display=swap");
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.main {
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+
+.header {
+  border: 1px solid #61DAFB;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: #BBEFFD;
+
+  &-vertical-center {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F8F8F8AD;
+}
+
+.loader {
+  left: 38%;
+  top: 30%;
+  z-index: 1000;
+  position: absolute;
+}
+
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.margin-top {
+  margin-top: 1rem;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.section {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.row-info {
+  margin-top: 0.5rem;
+}
+
+.info {
+  &-label {
+    color: lightsteelblue;
+  }
+  &-content {
+    color: black;
+  }
+}
+
+.first-row {
+  margin-top: 0.5rem;
+}
+
+.cell-bold {
+  font-weight: bold;
+}
+
+.cell-right {
+  text-align: right;
+}
+
+.cell-center {
+  text-align: center;
+}
